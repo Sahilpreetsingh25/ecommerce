@@ -1,8 +1,11 @@
+import BottomNavbar from "./navbar/bottom-navbar"
+import TopNavbar from "./navbar/top-navbar"
 
 const Header = () => {
     return (
       <div>
-        header
+      <TopNavbar/>
+      <BottomNavbar/>
       </div>
     )
   }
