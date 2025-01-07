@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Layout, Menu, Drawer, Button } from 'antd';
-import { PhoneOutlined, MenuOutlined } from '@ant-design/icons';
-
-const { Header } = Layout;
 
 const TopNavbar: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768); 
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768);
   const menuItems = [
     { key: '1', label: 'Shop' },
     { key: '2', label: 'Promo' },
@@ -14,12 +10,10 @@ const TopNavbar: React.FC = () => {
     { key: '4', label: 'Blog' },
   ];
 
-
   useEffect(() => {
     const handleResize = () => {
       const isMobile = window.innerWidth < 768;
       setIsMobileView(isMobile);
-
 
       if (!isMobile) {
         setIsDrawerOpen(false);
@@ -31,24 +25,22 @@ const TopNavbar: React.FC = () => {
   }, []);
 
   const fullMenu = (
-    <Menu
-      mode="horizontal"
-      items={menuItems}
-      style={{
-        borderBottom: 'none',
-        fontWeight: 500,
-        fontSize: '14px',
-      }}
-    />
+    <div className="flex space-x-6">
+      {menuItems.map(item => (
+        <a href={`#${item.key}`} key={item.key} className="text-gray-800 font-medium text-sm hover:text-blue-600">
+          {item.label}
+        </a>
+      ))}
+    </div>
   );
 
   return (
-    <Header style={{ background: '#fff', borderBottom: '1px solid #ddd', padding: '0 20px' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+    <header className="bg-white border-b border-gray-300 px-5 py-3">
+      <div className="flex justify-between items-center">
         {/* Left Section: Contact Information */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px' }}>
-          <PhoneOutlined style={{ color: '#555' }} />
-          <span style={{ color: '#555' }}>+62 819 821 967</span>
+        <div className="flex items-center space-x-2 text-sm text-gray-600">
+          <span>📞</span>
+          <span>+62 819 821 967</span>
         </div>
 
         {/* Right Section: Navigation */}
@@ -56,31 +48,30 @@ const TopNavbar: React.FC = () => {
 
         {/* Mobile Menu: Show Hamburger Icon */}
         {isMobileView && (
-          <Button
-            icon={<MenuOutlined />}
-            type="text"
-            onClick={() => setIsDrawerOpen(true)}
-          />
+          <button className="text-xl" onClick={() => setIsDrawerOpen(true)}>
+            ☰
+          </button>
         )}
       </div>
 
       {/* Drawer for Mobile Navigation */}
-      <Drawer
-        title="Navigation"
-        placement="right"
-        onClose={() => setIsDrawerOpen(false)}
-        open={isDrawerOpen}
-      >
-        <Menu
-          mode="vertical"
-          items={menuItems}
-          style={{
-            fontWeight: 500,
-            fontSize: '14px',
-          }}
-        />
-      </Drawer>
-    </Header>
+      {isDrawerOpen && (
+        <div className="fixed inset-0 bg-white bg-opacity-90 flex justify-end z-50">
+          <div className="w-64 bg-white p-6">
+            <button className="text-xl text-gray-600" onClick={() => setIsDrawerOpen(false)}>
+              ✖
+            </button>
+            <div className="flex flex-col space-y-4 mt-6">
+              {menuItems.map(item => (
+                <a href={`#${item.key}`} key={item.key} className="text-gray-800 font-medium text-lg hover:text-blue-600">
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
   );
 };
 

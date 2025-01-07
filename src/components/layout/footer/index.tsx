@@ -1,5 +1,6 @@
 import React from "react";
-import { Layout, Space } from "antd";
+import Layout from "antd/es/layout";
+import Space from "antd/es/space";
 import { FacebookOutlined, InstagramOutlined, YoutubeOutlined, LinkedinOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
