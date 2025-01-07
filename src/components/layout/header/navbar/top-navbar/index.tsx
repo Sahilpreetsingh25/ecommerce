@@ -37,16 +37,16 @@ const TopNavbar: React.FC = () => {
   return (
     <header className="bg-white border-b border-gray-300 px-5 py-3">
       <div className="flex justify-between items-center">
-        {/* Left Section: Contact Information */}
+     
         <div className="flex items-center space-x-2 text-sm text-gray-600">
           <span>📞</span>
           <span>+62 819 821 967</span>
         </div>
 
-        {/* Right Section: Navigation */}
+    
         {!isMobileView && <div>{fullMenu}</div>}
 
-        {/* Mobile Menu: Show Hamburger Icon */}
+       
         {isMobileView && (
           <button className="text-xl" onClick={() => setIsDrawerOpen(true)}>
             ☰
@@ -54,7 +54,7 @@ const TopNavbar: React.FC = () => {
         )}
       </div>
 
-      {/* Drawer for Mobile Navigation */}
+  
       {isDrawerOpen && (
         <div className="fixed inset-0 bg-white bg-opacity-90 flex justify-end z-50">
           <div className="w-64 bg-white p-6">
