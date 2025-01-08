@@ -61,7 +61,7 @@ const BottomNavbar: React.FC = () => {
     <header className="bg-black px-4 py-3 flex items-center justify-between ">
       {/* Logo */}
       <div className="flex items-center gap-2 text-white">
-        <div className="text-2xl font-bold text-orange-500">Ndagang</div>
+        <div className="text-2xl font-bold text-orange-500">Sahil</div>
       </div>
 
       {/* Search Input & Icon Buttons for Desktop */}

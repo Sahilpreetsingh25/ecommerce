@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "antd/es/layout";
 import Space from "antd/es/space";
 import { FacebookOutlined, InstagramOutlined, YoutubeOutlined, LinkedinOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const { Footer } = Layout;
 
@@ -14,8 +14,8 @@ const AppFooter: React.FC = () => {
 
         <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
       
-          <div className="flex items-center justify-center bg-orange-500 w-12 h-12 rounded-md">
-            <span className="text-white font-bold text-lg">TA</span>
+          <div className="flex items-center justify-center bg-orange-500 text-center w-12 h-12 rounded-md">
+            <span className="text-white font-bold text-sm">Sahil</span>
           </div>
     
           <Space size="large" className="flex text-center md:text-left">
@@ -55,7 +55,9 @@ const AppFooter: React.FC = () => {
 
 
         <span className="text-gray-400 text-sm">
-          ©2020 TanahAir Studio. All rights reserved.
+          ©2025 Sahil    <Link to="https://tickmark.app/" className="text-white hover:text-orange-500 text-sm">
+              Tickmark
+            </Link> . All rights reserved.
         </span>
 
       

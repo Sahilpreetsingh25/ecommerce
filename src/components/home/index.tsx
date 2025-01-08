@@ -8,7 +8,7 @@ const HomeCp = () => {
         <div className="max-w-6xl m-auto ">
         <CategoryCard/>
         </div>
-        <p>This is the Home Component!</p>
+      
       </div>
     );
   };
