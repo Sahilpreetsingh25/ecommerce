@@ -81,9 +81,9 @@ const Slider: React.FC = () => {
             }}
           >
             <div className="text-center  sm:text-left sm:mr-6">
-              <p className="text-lg sm:text-xl font-medium">{slide.dateRange}</p>
-              <h1 className="mt-2 text-lg sm:text-4xl md:text-5xl font-bold">{slide.title}</h1>
-              <h2 className="mt-2 text-sm sm:text-2xl font-bold">{slide.subtitle}</h2>
+              <p className="lg:text-3xl sm:text-xl font-medium">{slide.dateRange}</p>
+              <h1 className=" mt-2 lg:text-8xl sm:text-4xl md:text-5xl font-bold">{slide.title}</h1>
+              <h2 className="mt-2 lg:text-4xl text-sm sm:text-2xl font-bold">{slide.subtitle}</h2>
             </div>
 
 
