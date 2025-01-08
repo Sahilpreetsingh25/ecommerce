@@ -55,7 +55,7 @@ const Slider: React.FC = () => {
     }, 3000); // 3 seconds for each slide
 
     return () => clearInterval(interval);
-  }, [isReversed]);
+  }, [isReversed, slides.length]);
 
   useEffect(() => {
     if (currentSlide === slides.length - 1) {
@@ -63,7 +63,7 @@ const Slider: React.FC = () => {
     } else if (currentSlide === 0) {
       setIsReversed(false);
     }
-  }, [currentSlide]);
+  }, [currentSlide, slides.length]);
 
   return (
     <div className="relative max-w-6xl mx-auto overflow-hidden">

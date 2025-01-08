@@ -71,7 +71,7 @@ const TopNavbar: React.FC = () => {
 
         <div className="flex items-center space-x-2 text-sm text-gray-600">
           <span>📞</span>
-          <span>+62 819 821 967</span>
+          <span>+91 8198014292</span>
         </div>
 
        
