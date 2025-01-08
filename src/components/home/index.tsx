@@ -61,10 +61,10 @@ const HomeCp = () => {
       <div className="max-w-6xl m-auto py-6">
         <CategoryCard />
       </div>
-      <div className="max-w-6xl m-auto">
+      <div className="max-w-6xl m-auto px-6 px-6">
         <h1 className="text-4xl font-extrabold mb-6">New Items</h1>
         <TabBar />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
           {products.map((product, index) => (
             <Card key={index} {...product} />
           ))}
