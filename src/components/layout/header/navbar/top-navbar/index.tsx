@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router';
 
 const TopNavbar: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -31,13 +32,13 @@ const TopNavbar: React.FC = () => {
   const fullMenu = (
     <div className="flex space-x-6">
       {menuItems.map(item => (
-        <a
-          href={`#${item.key}`}
+        <Link
+          to={`#${item.key}`}
           key={item.key}
           className="text-gray-800 font-medium text-sm hover:text-blue-600"
         >
           {item.label}
-        </a>
+        </Link>
       ))}
     </div>
   );
@@ -53,13 +54,13 @@ const TopNavbar: React.FC = () => {
       </div>
       <div className="flex flex-col space-y-4 p-6">
         {menuItems.map(item => (
-          <a
-            href={`#${item.key}`}
+          <Link
+            to={`#${item.key}`}
             key={item.key}
             className="text-gray-800 font-medium text-lg hover:text-blue-600"
           >
             {item.label}
-          </a>
+          </Link>
         ))}
       </div>
     </div>
