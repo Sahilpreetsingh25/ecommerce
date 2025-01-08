@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import Header from "./header";
 
-import AppFooter from "./footer";
+import { default as Footer } from "./footer";
 
 const Layout = () => {
   return (
@@ -10,7 +10,7 @@ const Layout = () => {
       <main >
         <Outlet />
       </main>
-      <AppFooter />
+      <Footer />
     </>
   );
 };
