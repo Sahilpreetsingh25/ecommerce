@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy":"firebase deploy"
+    "deploy":"npm run build && firebase deploy"
   },
   "dependencies": {
     "antd": "^5.23.0",
