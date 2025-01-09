@@ -3,7 +3,9 @@ import Header from "./header";
 
 import { default as Footer } from "./footer";
 
+
 const Layout = () => {
+ 
   return (
     <>
       <Header />
