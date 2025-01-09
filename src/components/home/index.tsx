@@ -80,7 +80,7 @@ const HomeCp = () => {
             <div className="max-w-6xl m-auto px-6 py-6">
                 <PaymentMethods />
             </div>
-            <div className="max-w-6xl m-auto px-6 py-6">
+            <div className="max-w-6xl m-auto px-4 py-6">
                 <CustomerTestimonials />
             </div>
             <div className="max-w-6xl m-auto  py-6">

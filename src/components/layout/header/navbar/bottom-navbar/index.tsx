@@ -36,7 +36,7 @@ const BottomNavbar: React.FC = () => {
 
 
   const drawerMenu = (
-    <div className="fixed inset-0 bg-white bg-opacity-95 z-50 flex flex-col p-6">
+    <div className="fixed inset-0 bg-gradient-to-r from-gray-900 via-black to-gray-800 z-50 flex flex-col p-6">
       <button
         className="text-2xl self-end mb-4"
         onClick={() => setIsDrawerOpen(false)}
@@ -51,7 +51,7 @@ const BottomNavbar: React.FC = () => {
           className="w-full p-2 border-none outline-none"
         />
       </div>
-      <div className="flex flex-col gap-6 items-center text-gray-800">
+      <div className="flex flex-col gap-6 items-center text-white">
 
         <button onClick={() => handleClick("Heart")} className="relative text-3xl">
           <HeartOutlined />
@@ -79,7 +79,7 @@ const BottomNavbar: React.FC = () => {
   );
 
   return (
-    <header className="bg-black px-4 py-3 flex items-center justify-between">
+    <header className="bg-gradient-to-r from-gray-900 via-black to-gray-800 px-4 py-3 flex items-center justify-between">
    
       <div className="flex items-center gap-2 text-white">
         <div className="text-2xl font-bold text-orange-500">Sahil</div>

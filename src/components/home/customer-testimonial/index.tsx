@@ -33,7 +33,7 @@ const testimonials = [
 
 const CustomerTestimonials: React.FC = () => {
   return (
-    <section className="bg-gray-50 py-16 px-6">
+    <section className="bg-gray-50 py-16 ">
       <h2 className="text-5xl font-extrabold text-center mb-6 text-gray-800">What Our Customers Say</h2>
       <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
