@@ -39,7 +39,7 @@ const Articles: React.FC = () => {
   return (
     <section className="py-12 sm:py-16 px-6">
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-12 max-w-6xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 md:mb-0 text-center md:text-left">
+        <h2 className="text-5xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 md:mb-0 text-center md:text-left">
           Read Our Latest Articles
         </h2>
         <button className="text-orange-500 border border-orange-500 px-6 sm:px-8 py-2 sm:py-3 rounded-lg hover:bg-orange-500 hover:text-white transition-all text-sm sm:text-base md:text-lg">
