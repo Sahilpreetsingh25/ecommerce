@@ -1,4 +1,5 @@
-import LatestArticles from '../blogs';
+import Articles from '../articles';
+
 import Card from '../cards';
 import TabBar from '../tab-bar';
 import Slider from './carousel';
@@ -83,7 +84,7 @@ const HomeCp = () => {
         <CustomerTestimonials />
       </div>
       <div className="max-w-6xl m-auto  py-6">
-        <LatestArticles />
+        <Articles />
       </div>
         </div>
     );

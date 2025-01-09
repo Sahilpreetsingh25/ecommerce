@@ -35,7 +35,7 @@ const articles = [
   },
 ];
 
-const LatestArticles: React.FC = () => {
+const Articles: React.FC = () => {
   return (
     <section className=" py-16 px-6">
       <div className="flex flex-col md:flex-row justify-between items-center mb-12 max-w-6xl mx-auto">
@@ -76,4 +76,4 @@ const LatestArticles: React.FC = () => {
   );
 };
 
-export default LatestArticles;
+export default Articles;
