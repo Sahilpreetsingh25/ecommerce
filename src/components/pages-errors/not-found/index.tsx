@@ -1,9 +1,7 @@
-// src/pages/NotFound.tsx
 import React from "react";
-import { Link, useLocation } from "react-router-dom"; // For navigation and location
-
+import { Link, useLocation } from "react-router-dom"; 
 const NotFound: React.FC = () => {
-  const location = useLocation(); // Get the current location (URL)
+  const location = useLocation(); 
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">

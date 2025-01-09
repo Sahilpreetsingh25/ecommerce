@@ -1,4 +1,3 @@
-// src/components/PaymentMethods.tsx
 import React from 'react';
 
 const PaymentMethods: React.FC = () => {

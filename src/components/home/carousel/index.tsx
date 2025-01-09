@@ -6,38 +6,38 @@ const Slider: React.FC = () => {
       dateRange: "1 March 2021 - 30 March 2021",
       title: "Discount",
       subtitle: "50% All Items",
-      bgColor: "#FFA500", // Orange background
-      textColor: "#fff", // White text
-      imageUrl: "https://via.placeholder.com/600x400?text=Discount", // Example image URL
+      bgColor: "#FFA500", 
+      textColor: "#fff", 
+      imageUrl: "https://via.placeholder.com/600x400?text=Discount", 
     },
     {
       dateRange: "1 April 2021 - 30 April 2021",
       title: "Special Offer",
       subtitle: "Buy 1 Get 1 Free",
-      bgColor: "#FF5722", // Another color for variety
+      bgColor: "#FF5722", 
       textColor: "#fff",
-      imageUrl: "https://via.placeholder.com/600x400?text=Special+Offer", // Example image URL
+      imageUrl: "https://via.placeholder.com/600x400?text=Special+Offer", 
     },
     {
       dateRange: "1 April 2021 - 30 April 2021",
       title: "Special Offer",
       subtitle: "Buy 1 Get 1 Free",
-      bgColor: "#FF5722", // Another color for variety
+      bgColor: "#FF5722", 
       textColor: "#fff",
-      imageUrl: "https://via.placeholder.com/600x400?text=Special+Offer", // Example image URL
+      imageUrl: "https://via.placeholder.com/600x400?text=Special+Offer", 
     },
     {
       dateRange: "1 April 2021 - 30 April 2021",
       title: "Special Offer",
       subtitle: "Buy 1 Get 1 Free",
-      bgColor: "#FF5722", // Another color for variety
+      bgColor: "#FF5722",
       textColor: "#fff",
-      imageUrl: "https://via.placeholder.com/600x400?text=Special+Offer", // Example image URL
+      imageUrl: "https://via.placeholder.com/600x400?text=Special+Offer", 
     },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isReversed, setIsReversed] = useState(false); // Boolean to track direction
+  const [isReversed, setIsReversed] = useState(false); 
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -52,7 +52,7 @@ const Slider: React.FC = () => {
           return nextSlide;
         });
       }
-    }, 3000); // 3 seconds for each slide
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [isReversed, slides.length]);
@@ -99,7 +99,7 @@ const Slider: React.FC = () => {
         ))}
       </div>
 
-      {/* Dots for Navigation */}
+     
       <div className="flex justify-center mt-5 space-x-2 sm:space-x-3">
         {slides.map((_, index) => (
           <button

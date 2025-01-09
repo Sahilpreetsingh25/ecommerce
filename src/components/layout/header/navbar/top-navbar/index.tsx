@@ -28,7 +28,7 @@ const TopNavbar: React.FC = () => {
 
   const handleMenuClick = () => {
     if (isMobileView) {
-      setIsDrawerOpen(false); // Close the drawer on menu click for mobile/tablet
+      setIsDrawerOpen(false);
     }
   };
 
@@ -39,7 +39,7 @@ const TopNavbar: React.FC = () => {
           to={`/${item.key}`}
           key={item.key}
           className="text-gray-800 font-medium text-sm hover:text-blue-600"
-          onClick={handleMenuClick} // Close the menu when clicking a link
+          onClick={handleMenuClick} 
         >
           {item.label}
         </Link>
@@ -61,7 +61,7 @@ const TopNavbar: React.FC = () => {
             to={`/${item.key}`}
             key={item.key}
             className="text-gray-800 font-medium text-lg hover:text-blue-600"
-            onClick={handleMenuClick} // Close the menu when clicking a link
+            onClick={handleMenuClick} 
           >
             {item.label}
           </Link>

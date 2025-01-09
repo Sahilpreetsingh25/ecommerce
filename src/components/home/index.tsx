@@ -78,14 +78,14 @@ const HomeCp = () => {
                 </div>
             </div>
             <div className="max-w-6xl m-auto px-6 py-6">
-        <PaymentMethods />
-      </div>
-      <div className="max-w-6xl m-auto px-6 py-6">
-        <CustomerTestimonials />
-      </div>
-      <div className="max-w-6xl m-auto  py-6">
-        <Articles />
-      </div>
+                <PaymentMethods />
+            </div>
+            <div className="max-w-6xl m-auto px-6 py-6">
+                <CustomerTestimonials />
+            </div>
+            <div className="max-w-6xl m-auto  py-6">
+                <Articles />
+            </div>
         </div>
     );
 };
