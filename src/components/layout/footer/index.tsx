@@ -17,17 +17,17 @@ const AppFooter: React.FC = () => {
           </div>
 
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+            <Link to="/home" className="text-white hover:text-orange-500 text-lg font-medium transition-all duration-300 transform hover:scale-105">
+              Home
+            </Link>
             <Link to="/shop" className="text-white hover:text-orange-500 text-lg font-medium transition-all duration-300 transform hover:scale-105">
               Shop
-            </Link>
-            <Link to="/promo" className="text-white hover:text-orange-500 text-lg font-medium transition-all duration-300 transform hover:scale-105">
-              Promo
             </Link>
             <Link to="/about" className="text-white hover:text-orange-500 text-lg font-medium transition-all duration-300 transform hover:scale-105">
               About
             </Link>
-            <Link to="/blog" className="text-white hover:text-orange-500 text-lg font-medium transition-all duration-300 transform hover:scale-105">
-              Blog
+            <Link to="/articles" className="text-white hover:text-orange-500 text-lg font-medium transition-all duration-300 transform hover:scale-105">
+              Articles
             </Link>
           </div>
         </div>

@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 
-const categories = [
-  'All',
-  'Grocery',
-  'Home And Living',
-  'Electronics',
-  'Health And Beauty',
-  'Fashion',
-];
+type TabBarProps = {
+  categories: string[];
+  onTabChange: (tab: string) => void;
+};
 
-const TabBar: React.FC = () => {
+const TabBar: React.FC<TabBarProps> = ({ categories, onTabChange }) => {
   const [activeTab, setActiveTab] = useState<string>('All');
+
+  const handleTabClick = (category: string) => {
+    setActiveTab(category);
+    onTabChange(category);
+  };
 
   return (
     <div className="overflow-x-auto whitespace-nowrap bg-white py-4 px-2 border-b">
@@ -23,7 +24,7 @@ const TabBar: React.FC = () => {
                 ? 'text-orange-500 font-semibold border-b-2 border-orange-500'
                 : 'text-gray-400'
             }`}
-            onClick={() => setActiveTab(category)}
+            onClick={() => handleTabClick(category)}
           >
             {category}
           </button>

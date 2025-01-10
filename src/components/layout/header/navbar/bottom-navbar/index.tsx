@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import { useAtom } from "jotai";
 import { wishlistAtom } from "../../../../../store/wishlistAtom"; 
+import { Link } from "react-router";
 
 const BottomNavbar: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -53,27 +54,27 @@ const BottomNavbar: React.FC = () => {
       </div>
       <div className="flex flex-col gap-6 items-center text-white">
 
-        <button onClick={() => handleClick("Heart")} className="relative text-3xl">
+        <Link to="/wish-list" onClick={() => handleClick("Heart")} className="relative text-3xl">
           <HeartOutlined />
           {wishlist.length > 0 && (
             <span className="absolute top-[-3px] right-[-6px] bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">
               {wishlist.length}
             </span>
           )}
-        </button>
+        </Link>
 
-        <button onClick={() => handleClick("Cart")} className="relative text-3xl">
+        <Link to="/cart" onClick={() => handleClick("Cart")} className="relative text-3xl">
           <ShoppingCartOutlined />
           <span className="absolute top-[-3px] right-[-6px] bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">
             4
           </span>
-        </button>
-        <button onClick={() => handleClick("User")} className="text-3xl">
+          </Link>
+        <Link to="/profile" onClick={() => handleClick("User")} className="text-3xl">
           <UserOutlined />
-        </button>
-        <button onClick={() => handleClick("Bell")} className="text-3xl">
+        </Link>
+        <Link to="/notifications" onClick={() => handleClick("Bell")} className="text-3xl">
           <BellOutlined />
-        </button>
+        </Link>
       </div>
     </div>
   );
@@ -103,27 +104,27 @@ const BottomNavbar: React.FC = () => {
 
           <div className="flex gap-5 items-center text-white">
 
-            <button onClick={() => handleClick("Heart")} className="relative text-xl">
+            <Link to="/wish-list" onClick={() => handleClick("Heart")} className="relative text-xl">
               <HeartOutlined />
               {wishlist.length > 0 && (
                 <span className="absolute top-[-3px] right-[-6px] bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">
                   {wishlist.length}
                 </span>
               )}
-            </button>
+            </Link>
 
-            <button onClick={() => handleClick("Cart")} className="relative text-2xl">
+            <Link to="/cart" onClick={() => handleClick("Cart")} className="relative text-2xl">
               <ShoppingCartOutlined />
               <span className="absolute top-[-3px] right-[-6px] bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">
                 4
               </span>
-            </button>
-            <button onClick={() => handleClick("User")} className="text-xl">
+            </Link>
+            <Link to="/profile" onClick={() => handleClick("User")} className="text-xl">
               <UserOutlined />
-            </button>
-            <button onClick={() => handleClick("Bell")} className="text-xl">
+            </Link>
+            <Link to="/notifications" onClick={() => handleClick("Bell")} className="text-xl">
               <BellOutlined />
-            </button>
+            </Link>
           </div>
         </>
       )}
