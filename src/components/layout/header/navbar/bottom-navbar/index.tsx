@@ -33,6 +33,7 @@ const BottomNavbar: React.FC = () => {
 
   const handleClick = (icon: string) => {
     console.log(`${icon} clicked`);
+    setIsDrawerOpen(false);
   };
 
 
